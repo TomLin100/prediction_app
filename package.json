@@ -1,7 +1,7 @@
 {
-  "name": "ionic_test",
+  "name": "prediction_app",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "tomkhlin - used by Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -62,5 +62,5 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.4.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project that can be mobile apps.User can use app to predict GSAT result."
 }
