@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FetchGsatDataService } from '../fetch-gsat-data.service';
 import { Grades, Gsat, Input, PredictResult } from '../result';
 
@@ -9,13 +9,16 @@ import { Grades, Gsat, Input, PredictResult } from '../result';
 })
 export class HomePage {
   result: PredictResult;
+
   constructor(private fetchResult: FetchGsatDataService) {}
+
   onBtnClick(): void {
     const grades = new Gsat();
       grades.chinese =  15;
       grades.english =  15;
-      grades.mathA = 15;
-      grades.mathB = 15;
+      // grades.mathA = 15;
+      // grades.mathB = 15;
+      grades.math = 15;
       grades.society = 15;
       grades.science = 15;
       grades.engListeningLevel = 'A';

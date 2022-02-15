@@ -23,8 +23,9 @@ export class Grades {
 export class Gsat {
     chinese:           number;
     english:           number;
-    mathA:             number;
-    mathB:             number;
+    // mathA:             number;
+    // mathB:             number;
+    math:              number;
     science:           number;
     society:           number;
     engListeningLevel: string;

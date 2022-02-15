@@ -7,12 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-  </div>
+  <ion-button (click)="onBtnClick()">發送要求</ion-button>
+  <app-result-list [predictResult]="result.result"></app-result-list>
 </ion-content>
