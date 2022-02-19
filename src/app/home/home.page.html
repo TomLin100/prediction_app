@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-button (click)="onBtnClick()">發送要求</ion-button>
+<ion-content [fullscreen]="true" color="dark">
+  <app-grades-form></app-grades-form>
   <app-result-list [predictResult]="result.result"></app-result-list>
 </ion-content>

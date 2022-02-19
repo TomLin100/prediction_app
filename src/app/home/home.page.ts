@@ -10,7 +10,10 @@ import { Grades, Gsat, Input, PredictResult } from '../result';
 export class HomePage {
   result: PredictResult;
 
-  constructor(private fetchResult: FetchGsatDataService) {}
+  constructor(private fetchResult: FetchGsatDataService) {
+    const obj = new PredictResult();
+    this.result = obj;
+  }
 
   onBtnClick(): void {
     const grades = new Gsat();

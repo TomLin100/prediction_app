@@ -1,3 +1,68 @@
-<p>
-  grades-form works!
-</p>
+<form [formGroup]="inputData" (ngSubmit)="submitForm()" novalidate>
+    <ion-list inset="true">
+        <ion-list-header>
+            <ion-label>期望薪資</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>期望薪資</ion-label>
+            <ion-input type="number" min="0"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list formGroupName="gsat" inset="true">
+        <ion-list-header lines="full">
+            <ion-label>學測成績</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>國文</ion-label>
+            <ion-input type="number" min="0" max="15" formControlName="chinese"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>英文</ion-label>
+            <ion-input type="number" min="0" max="15" formControlName="english"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>數學</ion-label>
+            <ion-input type="number" min="0" max="15" formControlName="math"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>自然</ion-label>
+            <ion-input type="number" min="0" max="15" formControlName="science"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>社會</ion-label>
+            <ion-input type="number" min="0" max="15" formControlName="society"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>英聽</ion-label>
+            <ion-select formControlName="engListeningLevel" interface="popover">
+                <ion-select-option *ngFor="let item of defaultELLevel" [value]="item">{{item}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-list inset="true">
+        <ion-list-header lines="full">
+            <ion-label>學群、地區及公私立</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label position="floating">學群</ion-label>
+            <ion-select multiple>
+                <ion-select-option *ngFor="let item of defaultGroup" [value]="item">{{item}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">地區</ion-label>
+            <ion-select multiple>
+                <ion-select-option *ngFor="let item of defaultLoc" [value]="item">{{item}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">公/私立</ion-label>
+            <ion-select multiple>
+                <ion-select-option *ngFor="let item of defaultProperty" [value]="item">{{item}}</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-button type="submit" color="primary" expand="block">送出</ion-button>
+</form>

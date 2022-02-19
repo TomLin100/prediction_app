@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { ResultListComponentModule } from '../result-list/result-list.module';
+import { GradesFormComponentModule } from '../grades-form/grades-form.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ResultListComponentModule } from '../result-list/result-list.module';
     FormsModule,
     IonicModule,
     ResultListComponentModule,
+    GradesFormComponentModule,
     HomePageRoutingModule
   ],
   declarations: [HomePage]
